@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #04dbd8
+}
+
+#container{
+    height: 590px;
+    width: 340px;
+    border-radius: 20px 20px 50px;
+    background: #e6e5c3;
+    border: 5px solid #000;
+    position: relative;
+    box-shadow: 
+        inset -8px 0 0 #c4c39f,
+        inset 8px 0 0 #e8e7d3;
+}
+
+/* =========== top =========== */
+#top{
+    height: 30px;
+    width: 100%;
+    border-bottom: 5px solid #000;
+    position: relative;
+}
+
+#top::after{
+    content: '';
+    height: 100%;
+    width: 5px;
+    background: #000;
+    position: absolute;
+    left: 30px;
+}
+
+#top::before{
+    content: '';
+    height: 100%;
+    width: 5px;
+    background: #000;
+    position: absolute;
+    right: 30px;
+}
+
+/* =========== display =========== */
+#containerDisplay{
+    height: 260px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: inset 0 5px 0 #c4c39f;
+}
+
+#borderDisplay{
+    height: 100%;
+    width: 100%;
+    background: #816663;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 40px;
+    border: 5px solid #000;
+}
+
+#light{
+    height: 100%;
+    width: 60px;
+    position: relative;
+}
+
+#light::after{
+    content: '';
+    height: 8px;
+    width: 8px;
+    background: #E7616A;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border-radius: 50%;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 2px #383636;
+}
+
+#visor{
+    height: 150px;
+    width: 150px;
+    background: #C4E892;
+    border: 5px solid #000;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 6px 6px 0 #9fbd77;
+}
+
+.reflexoUm{
+    height: calc(100% + 100px);
+    width: 30px;
+    background: #DAF0BB;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -60px;
+    left: 10px;
+}
+
+.reflexoDois{
+    height: calc(100% + 100px);
+    width: 45px;
+    background: #DAF0BB;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 70px;
+    animation: reflexo 1s infinite linear;
+}
+
+/* =========== buttons =========== */
+#containerButtons{
+    height: 280px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ----- separação de divs 1 ----- */
+.btnNivel{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ----- setas ----- */
+#mouse{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background: #9C9FAA;
+    border: 5px solid #000;
+    position: relative; 
+}
+
+#mouse::after{
+    content: '';
+    height: 32px;
+    width: 32px;
+    background: #806662;
+    position: absolute;
+    top: 35%;
+    left: 36%;
+}
+
+#up, #right, #botton, #left{
+    height: 30px;
+    width: 30px;
+    background: #806662;
+    position: absolute;
+    border: 5px solid #000;
+    border-bottom: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#up{
+    top: 12%;
+    left: 37%;
+    box-shadow: inset 0 4px 0 #a88c91;
+}
+
+#right{
+    top: 37%;
+    right: 12%;
+    transform: rotate(90deg);
+    box-shadow: 
+        inset 4px 0 0 #a88c91,
+        inset -4px 0 0 #614e4b;
+}
+
+#botton{
+    bottom: 11%;
+    left: 37%;
+    transform: rotate(180deg);
+    box-shadow: inset 0 4px 0 #614e4b;
+}
+
+#left{
+    left: 13%;
+    top: 37%;
+    transform: rotate(270deg);
+    box-shadow: 
+        inset 4px 0 0 #614e4b,
+        inset -4px 0 0 #a88c91;
+    
+}
+
+#up:focus, #right:focus, #botton:focus, #left:focus{
+    box-shadow: none;
+}
+
+/* ----- botoes A B ----- */
+#buttons{
+    height: 55px;
+    width: 110px;
+    background: #9C9FAA;
+    border-radius: 40px;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotate(-25deg);
+}
+
+#btnB, #btnA{
+    height: 40px;
+    width: 40px;
+    background: #E7616A;
+    border-radius: 50%;
+    border: 5px solid #000;
+    box-shadow: inset 4px 0 0 #e8a9ae;
+    cursor: pointer;
+}
+
+#btnB:focus, #btnA:focus{
+    box-shadow: none;
+}
+
+/* ----- separação de divs 2 ----- */
+#containerStart{
+    height: auto;
+    width: auto;
+    position: relative;
+    top: -50px;
+}
+
+.btnStar{
+    height: 19px;
+    width: 50px;
+    border-radius: 40px;
+    background: #6B5357;
+    border: 5px solid #000;
+    transform: rotate(-30deg);
+    box-shadow: inset 0 4px 0 #a88c91;
+    cursor: pointer;
+}
+
+.btnStar:focus{
+    box-shadow: none;
+}
+
+#airExit{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-20deg);
+    position: absolute;
+    right: -10px;
+    bottom: 95px;
+}
+
+#airExit li{
+    height: 8px;
+    width: 65px;
+    background: #b8b698;
+    transform: rotate(90deg);
+    border-radius: 40px;
+    position: absolute;
+    box-shadow: inset 0 2px 0 #404040;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+#airExit li:nth-child(1){
+    right: 10px;
+/*    bottom: 65px;*/
+}
+
+#airExit li:nth-child(2){
+    right: 30px;
+/*    bottom: 60px;*/
+}
+
+#airExit li:nth-child(3){
+    right: 50px;
+/*    bottom: 55px;*/
+}
+
+#airExit li:nth-child(4){
+    right: 70px;
+/*    bottom: 50px;*/
+}
+
+#airExit li:nth-child(5){
+    right: 90px;
+/*    bottom: 45px;*/
+}
+
+#airExit li:nth-child(6){
+    right: 110px;
+/*    bottom: 40px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
